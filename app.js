@@ -4,18 +4,15 @@ const openModalBtn = document.getElementById('openModal');
 const closeModalBtn = document.getElementById('closeModal');
 const saveSeriesBtn = document.getElementById('saveSeries');
 
-// Elementos do player de vídeo
 const videoModal = document.getElementById('videoModal');
 const closeVideoModalBtn = document.getElementById('closeVideoModal');
 const videoPlayer = document.getElementById('videoPlayer');
 
-// 🌟 Novos elementos da janela de confirmação
 const confirmModal = document.getElementById('confirmModal');
 const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
 const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
-let indexToDelete = null; // Guarda a fita que está prestes a ser apagada
+let indexToDelete = null;
 
-// Carregar dados salvos ou iniciar array vazio
 let mySeries = JSON.parse(localStorage.getItem('miiSeriesData')) || [];
 
 function getYouTubeId(url) {
@@ -54,10 +51,9 @@ function renderGrid() {
             }
         };
 
-        // MODIFICADO: Dispara a nova janela de confirmação em vez do confirm() nativo
         const deleteBtn = card.querySelector('.remove-btn');
         deleteBtn.onclick = (e) => {
-            e.stopPropagation(); // Não deixa o vídeo abrir ao clicar no X
+            e.stopPropagation(); 
             askToRemove(index);
         };
 

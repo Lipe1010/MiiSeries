@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiiSeries // Cyber Blue</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00a2ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+
+    <div class="bg-vfx"></div>
+
+    <header>
+        <h1 class="chrome-text">MiiSeries</h1>
+        <p class="tagline">Personal Virtual TV Station v3.0</p>
+    </header>
+
+    <button id="openModal" class="add-btn-float">+</button>
+
+    <main class="series-grid" id="seriesGrid"></main>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Nova Abertura</h2>
+            <input type="text" id="seriesName" placeholder="Nome da Série">
+            <input type="url" id="seriesLink" placeholder="Link do Vídeo (YouTube)">
+            <input type="url" id="seriesImage" placeholder="Link da Imagem da Capa (Opcional)">
+            <div class="modal-buttons">
+                <button id="saveSeries" class="btn-primary">Salvar</button>
+                <button id="closeModal" class="btn-secondary">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="videoModal" class="modal-overlay">
+        <div class="video-modal-content">
+            <button id="closeVideoModal" class="remove-btn" style="top: -15px; right: -15px;">X</button>
+            <div class="iframe-container">
+                <iframe id="videoPlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="videoModal" class="modal-overlay">
+        <div class="video-modal-content">
+            <button id="closeVideoModal" class="remove-btn" style="top: -15px; right: -15px;">X</button>
+            <div class="iframe-container">
+                <iframe id="videoPlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmModal" class="modal-overlay">
+        <div class="modal-content confirm-box">
+            <h2 style="text-shadow: 0 0 10px var(--laser-pink);">Alerta de Sistema</h2>
+            <p class="confirm-text">Tem certeza que deseja deletar esta abertura da sua estação virtual?</p>
+            <div class="modal-buttons">
+                <button id="confirmDeleteBtn" class="btn-danger">Sim, quero excluir</button>
+                <button id="cancelDeleteBtn" class="btn-secondary">Não, desejo manter</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

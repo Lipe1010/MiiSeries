@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="Mii.png">
+    
+    <link rel="apple-touch-icon" href="Mii.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
     <meta name="theme-color" content="#00a2ff">
     <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
@@ -17,6 +21,8 @@
     <header>
         <h1 class="chrome-text">MiiSeries</h1>
         <p class="tagline">Personal Virtual TV Station v3.0</p>
+        <br>
+        <h2>Crie seu próprio álbum de videos, séries e muito mais!</h2>
     </header>
 
     <button id="openModal" class="add-btn-float">+</button>
@@ -26,7 +32,7 @@
     <div id="modal" class="modal-overlay">
         <div class="modal-content">
             <h2>Nova Abertura</h2>
-            <input type="text" id="seriesName" placeholder="Nome da Série">
+            <input type="text" id="seriesName" placeholder="Nome">
             <input type="url" id="seriesLink" placeholder="Link do Vídeo (YouTube)">
             <input type="url" id="seriesImage" placeholder="Link da Imagem da Capa (Opcional)">
             <div class="modal-buttons">
